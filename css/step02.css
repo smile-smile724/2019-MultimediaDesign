@@ -1,0 +1,126 @@
+.nav-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+    z-index: 10;
+}
+.nav-container div{
+    padding: 20px;
+    background-color: #03A9F4;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.nav-container div span{
+    padding: 3px 10px;
+    border-radius: 100%;
+    background: #F44336;
+    margin-right: 10px;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/step02/bag.png") no-repeat;
+    background-size: 100%
+}
+.lime>img{
+    display: inline-block;
+    position: relative;
+    top: 15.9vh;
+    left: 13.7vw;
+    z-index: 2;
+}
+.docu {
+    position: absolute;
+    border: 1px solid #666;
+    padding: 10px;
+}
+.bucket{
+    display: inline-block;
+    position: absolute;
+    top: 47vh;
+    left: 13vw;
+   
+}
+.lid{
+    position: relative;
+    left: -14vw;
+    top: 15vh;
+    width: 86%;
+    z-index: 3;
+    transform: rotate(0);
+}
+#wood{
+    display: inline-block;
+    position: absolute;
+    right: 17vw;
+    top: 70vh;
+}
+#fire {
+    position: absolute;
+    right: 18vw;
+    top: 65vh;
+    display: none;
+}
+#steam{
+    position: absolute;
+    right: 11vw;
+    top: -5vh;
+    display: none;
+    z-index: 5;
+}
+.score {
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    color: #FFEB3B;
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.score>span{
+    color: red;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+
+
+
+/* 石灰动画 */
+@keyframes lime {
+    0% { left: 13.7vw; top: 15.9vh }
+    30% { left: 26.7vw; top: 15.9vh  }
+    100% { left: 26.7vw; top: 65.5vh }
+}
+
+/* 盖子动画 */
+@keyframes lid {
+    from {
+        left: -14vw;
+        top: 15vh;
+        transform: rotate(0);
+    }
+    to {
+        left: 2vw;
+        top: 17vh;
+        transform: rotate(22deg);
+    }
+}
+
+/* 搬桶动画 */
+@keyframes moveBucket {
+    from { 
+        top: 47vh;
+        left: 13vw;
+    }
+    to {
+        top: -2.8vh;
+        left: 56vw;
+    }
+}

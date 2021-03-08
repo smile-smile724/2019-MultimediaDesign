@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传统技艺（地图）</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Rank.css">
+    <link rel="stylesheet" href="css/Skills_map.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script src="js/Rank.js"></script>
+    <script src="js/config.js"></script>
+    <style>
+            .horn{
+                position: fixed;
+                width:40px;
+                height:40px;
+                background: url("img/horn.svg") no-repeat;
+                background-size:cover;
+                top:15px;
+                left: 50%;
+                margin-left: 240px;
+                cursor: pointer;
+                z-index: 99;
+            }
+    </style>
+</head>
+<body>
+    <!-- 配音 -->
+    <audio src="notice/Skill.m4a" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <a href="/travel/index"><span class="go_back">Back</span></a>
+        <h2>请选择你们要去往的地点，学一学那里的传统技艺</h2>
+        <div><img src="img/Rank.svg" width="27px" height="27px"></div>
+    </div>
+    <div class="map">
+        <div class="map_bg">
+            <img src="img/skill-map.png" />
+        </div>
+        <div class="map_location">
+            <img class="map_pic dongp" src="img/HuangJ.png" id="HuangJ">
+            <img class="map_icon dongp" src="img/place.png" >
+            <img class="map_pic wan_yc" src="img/WanY.png" id="wan_y">
+            <img class="map_icon wan_yc" src="img/place.png" >
+            <img class="map_pic huang_td" src="img/ZhuZ.png" id="ZhuZ">
+            <img class="map_icon huang_td" src="img/place.png" >
+            <img id="car" src="img/car.png" >
+        </div>
+    </div>
+    <div class="Rank">
+        <ul class="Rank-main">
+            
+        </ul>
+    </div>
+    
+    <script src="js/Skill-control.js"></script>
+    <script src="js/control.js"></script>
+    <script>
+            $(".horn").click(function(){
+                $("#dubbing").get(0).play();
+            });
+        </script>
+</body>
+</html>

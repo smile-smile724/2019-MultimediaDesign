@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>碗窑游戏</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/WanY-game.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/WanY-game.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <!-- 配音 -->
+    <audio src="notice/wan_y.m4a" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+    </div>
+    <div class="main">
+        <div class="bg">
+            <img src="img/WanY_bg.png" />
+        </div>
+        <div class="word">
+            <span>欢迎来到碗窑！选择一块泥开始你的碗窑之旅叭！</span>
+        </div>
+        <div  class="container">
+            <img src="img/chai.png" class="chai" >
+            <img src="img/chai.png" class="chai" >
+            <img src="img/chai.png" class="chai" >
+            <img src="img/chai.png" class="chai" >
+            <img src="img/chai.png" class="chai" >
+            <img src="img/ni.png" id="ni">
+        </div>
+    </div>
+
+    <div class="window" id="window">
+        <p class="selTitle">选择陶瓷形制</p>
+        <p style="text-align: center;margin-top: 3vh;">
+            <button style="margin-right: 1vw;" id="wanbtn" class="btn">碗</button>
+            <button style="margin-left: 1vw;" class="btn">瓷瓶</button>
+        </p>
+    </div>
+
+    <div class="window" id="warning" style="display: none">
+        <p class="selTitle">温度过高，扣2分</p>
+        <p style="text-align: center;margin-top: 3vh;">
+            <button id="btn" class="btn">继续</button>
+        </p>
+    </div>
+    <div class="score">得分<span id="sco">10</span></div>
+</body>
+</html>

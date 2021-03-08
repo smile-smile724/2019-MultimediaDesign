@@ -1,0 +1,80 @@
+body{
+    background: url(../img/main_bg.png) no-repeat;
+    background-size:cover;
+}
+
+.main{
+    width:80%;
+    position: relative;
+    margin:5% auto 0 auto;
+
+}
+.video_box{
+    width: 70%;
+}
+.video_box video{
+    width: 100%;
+    height: auto;
+}
+.chat_box{
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.chat_top{
+    height: 80%;
+    border: rgba(153, 153, 153, 0.15) 10px solid;
+	border-radius: 23px;
+}
+.chat_get{
+    height:100%;
+    background-color: white;
+    border-radius: 13px;
+    margin:auto;
+    opacity: 0.7;
+}
+.chat_num{
+    color: rgba(42, 130, 228, 1);
+	font-size: 14px;
+}
+.message-container{
+    width:94%;
+    height:87%;
+    list-style: none;
+    padding:0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left:2%;
+    float:left;
+}
+.message-container li{
+    margin-bottom: 0;
+    padding-bottom:0.5%;
+}
+.message-container::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+
+}
+.message-container::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    background: rgba(0,0,0,0.2);
+}
+.message-container::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+.chat_num_title{
+    margin:0 0 0 2%;
+}
+.clear_btn{
+    border:none;
+    outline: none;
+    float:right;
+    border-radius: 2px;
+    background-color:transparent;
+    color: rgba(42, 130, 228, 1);
+    margin:0 2% 0 0;
+}

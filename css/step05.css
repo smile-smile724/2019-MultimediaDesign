@@ -1,0 +1,115 @@
+.nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+    z-index: 20;
+}
+.nav div{
+    padding: 20px;
+    background-color: #03A9F4;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.nav div span{
+    padding: 3px 10px;
+    border-radius: 100%;
+    background: #F44336;
+    margin-right: 10px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/step05/bcg.png") no-repeat;
+    background-size: 100%;
+}
+.main{
+    width: 85vw;
+    margin: 35vh auto 0 auto;
+}
+.main>img{
+    position: relative;
+}
+.sunimg{
+    position: absolute;
+    width: 4vw;
+    z-index: 10;
+    cursor: pointer;
+}
+.le{ top: 4vh; }
+.ri{ left: 5vw; }
+#cloud1{
+    width: 15vw;
+    position: absolute;
+    top: 19vh;
+    left: 15vw;
+    transform: translate(0vw,0);
+    z-index: 5;
+}
+#cloud2{
+    width: 15vw;
+    position: absolute;
+    top: 4vh;
+    right: 10vw;
+    transform: translate(0vw,0);
+    z-index: 5;
+}
+
+.sun{
+    position: absolute;
+    top: 5.5vh;
+    right: 41.5vw;
+    cursor: pointer;
+    width: 18.7vw;
+    
+}
+
+.score {
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    color: #FFEB3B;
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.score>span{
+    color: red;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+/* 动画 */
+@keyframes scroll {
+    from { transform: translate(0vw,0) }
+    to { transform: translate(-100vw,0) }
+}
+@keyframes sunAnimate1 {
+    from { top: 4vh;left: 0;width: 4vw; }
+    to { top: -37vh;left: 39vw;width: 0; }
+}
+@keyframes sunAnimate2 {
+    from { top: 4vh;left: 0;width: 4vw; }
+    to { top: -27vh;left: 21vw;width: 0; }
+}
+@keyframes sunAnimate3 {
+    from { top: 4vh;left: 0;width: 4vw; }
+    to { top: -37vh;left: 6vw;width: 0; }
+}
+@keyframes sunAnimate4 {
+    from { top: 0;left: 5vw;width: 4vw; }
+    to { top: -27vh;left: -11vw;width: 0; }
+}
+@keyframes sunAnimate5 {
+    from { top: 0;left: 5vw;width: 4vw; }
+    to { top: -37vh;left: -26vw;width: 0; }
+}
+
+
+
+
+

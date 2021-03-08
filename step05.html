@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/step05.css">
+    <style>
+        *{ margin: 0; padding: 0; }
+        a{ text-decoration: none }
+    </style>
+    <title>晾晒成纸</title>
+    <script src="./js/jquery.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/travel/step04"><div>上一步</div></a>
+            <div>收集太阳</div>
+            <a onclick="over()"><div>结束</div></a>
+        </div>
+        <div class="main">
+            <div style="position: relative;display: inline-block"><img class="sunimg le" src="./images/step05/sun.png" alt=""><img class="boards" src="./images/step05/wet1.png" alt="" style="top:8vh;width:18vw;"></div>
+            <div style="position: relative;top:-20vh;display: inline-block"><img class="sunimg le" src="./images/step05/sun.png" alt=""><img class="boards" src="./images/step05/wet2.png" alt="" style="top:-18vh;width:14vw;"></div>
+            <div style="position: relative;display: inline-block"><img class="sunimg le" src="./images/step05/sun.png" alt=""><img class="boards" src="./images/step05/wet3.png" alt="" style="top:6vh;width:18vw;"></div>
+            <div style="position: relative;top:-20vh;display: inline-block"><img class="sunimg ri" src="./images/step05/sun.png" alt=""><img class="boards" src="./images/step05/wet4.png" alt="" style="top:-18vh;width:14vw;"></div>
+            <div style="position: relative;display: inline-block"><img class="sunimg ri" src="./images/step05/sun.png" alt=""><img class="boards" src="./images/step05/wet5.png" alt="" style="top:8vh;width:18vw;"></div>
+        </div>
+        <div class="cloud">
+            <img id="cloud1" src="./images/step05/cloud1.png" alt="">
+            <img id="cloud2" src="./images/step05/cloud2.png" alt="">
+        </div>
+        <div>
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <!-- <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt="">
+           <img class="sun" src="./images/step05/sun.png" alt=""> -->
+        </div>
+        <div class="score">得分<span>10</span></div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            scroll();
+            let i = 0;
+            var suns = document.getElementsByClassName("sunimg");
+            var boards = document.getElementsByClassName("boards");
+            for(let t=0,len=suns.length;t<len;t++){
+                suns[t].onclick = function () {
+                    let x = t+1;
+                    suns[t].style.animation = "sunAnimate"+ x +" 1s";
+                    suns[t].style['animation-fill-mode'] = 'forwards';
+                    boards[t].src = './images/step05/dry'+ x +'.png';
+                }
+            }
+            
+        };
+        //云朵滚动
+        function scroll () {
+            var cloud1 = document.getElementById("cloud1");
+            var cloud2 = document.getElementById("cloud2");
+            cloud1.style.animation = "scroll 20s";
+            cloud2.style.animation = "scroll 20s";
+            cloud1.style['animation-iteration-count'] = "infinite";
+            cloud2.style['animation-iteration-count'] = "infinite";
+        }
+        function change () {
+            var main = document.getElementById("main");
+            main.src = "./images/step05/drypaper.png";
+        }
+        
+        function over () {
+            
+            $.ajax({
+                url: "/travel/zhuzhi",
+                type: "post",
+                data: { add: "10" },
+                success: function (res) {
+                    //console.log(res);
+                    alert("游戏结束，成绩已上传");
+                    url = "/travel/skills_map?content=ZhuZ";//此处拼接内容
+            window.location.href = url;
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+    </script>
+</body>
+</html>

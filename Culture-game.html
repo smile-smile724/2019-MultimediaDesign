@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>闯关问答</title>
+<audio  controls="controls" preload="auto" hidden="true" autoplay="autoplay" loop="true" id="music"> <source src="img/风中的低语.mp3" type="audio/mp3"></audio>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="css/main.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/Culture-game.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+<script src="js/config.js"></script>
+<style>
+    body{
+        background-color: white;
+    }
+    .main-quiz-holder .slide-container ul.answers li.selected{
+        color:#f88603;
+    /* box-shadow:0 1px 5px #eb2a2a,inset 0 10px 20px #f3600c;
+    -o-box-shadow:0 1px 5px #eb2a2a,inset 0 10px 20px #f3600c;
+    -webkit-box-shadow:0 1px 5px #eb2a2a,inset 0 10px 20px #f3600c;
+    -moz-box-shadow:0 1px 5px #eb2a2a,inset 0 10px 20px #f3600c; */
+    }
+    .main_box{
+        background-color:gray;
+        opacity: 0.8;
+        border-radius: 16px;
+        position: absolute;
+        top:20%;
+    }
+    .nav span{
+        color:white;
+        background: url("img/remain_back.png") no-repeat left center;
+    }
+    #music-btn{
+        width:2%;
+        position: absolute;
+        top:12px;
+        right:20px;
+    }
+    #people{
+        position: absolute;
+        top:50%;
+        left:10%;
+        z-index:2;
+    }
+    .horn{
+        position: fixed;
+        width:40px;
+        height:40px;
+        background: url("img/horn.svg") no-repeat;
+        background-size:cover;
+        top:90%;
+        left:50%;
+        margin-left:-20px;
+        cursor: pointer;
+        z-index: 99;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+    <!-- 配音 -->
+    <audio src="#" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+        <img src="img/onmusic.png" id="music-btn">
+    </div>
+    <div class="monologues-item" style="background-color: black">
+        <!-- 独白 -->
+        <div class="monologues-word">     独山村位于浙江省遂昌县城西南40公里处,以天马山独立于乌溪江东岸而得名。<br><br>南宋时，尚书左丞相叶梦得的曾孙叶峦视此地山奇水秀，风光独好，自邻近的浙江西南部的松阳县（今属遂昌县）古市卯山迁居于此,逐渐形成村落。明世宗嘉靖年间，叶氏后裔叶以蕃殿试中二甲十九名进士，官工部营缮司员外郎。<br><br>一个位于大山深处的小小独山村，竟然有人考中二甲一十九名进士（即当时全国科考的第22名），这是何等骄人的成绩。<br><br>叶以蕃之所以能金榜高中，这是其父叶弘渊言传身教、悉心培养的结果。
+        </div>
+        <div class="monologues-next">点击屏幕继续 </div>
+    </div>
+
+    <div class="monologues-item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="monologues-word">     叶弘渊从小诵读诗书，知书识礼，敦厚孝友。母亲患病，吁天以求身代。其父六十岁时，妾生下一个儿子，遭父亲不喜，叶弘渊得知，暗地里把小孩抱回抚养。
+            </div>
+            <div class="monologues-next">点击屏幕继续 </div>
+        </div>
+    
+    <div class="main">
+        <div class="main_bg">
+            <img src="#">
+        </div>
+        <img src="img/yhy.png" id="people">
+        <div class="main_box">
+                <h1></h1>
+                <div class="main_top">
+                    <div id="word"></div>
+                    <div class="time">
+                        计时   <label id="time"></label>
+                    </div>
+                    <div class="judge">
+                        <span style="color:rgba(14, 208, 25, 1);">正确   </span><label id="right"></label>
+                        <span style="color: rgba(212, 48, 48, 1);margin-left:82px;">错误   </span><label id="wrong"></label>
+                    </div>
+                </div>
+                <!-- 代码 开始 -->
+                <div class="demo">
+                    <div id="quiz-container"></div>
+                </div>
+                <!-- 代码 结束 -->
+        </div>
+        
+    </div>
+
+    <div class="monologues-item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="monologues-word">  叶弘渊的长兄早逝，遗下一个孤儿。叶弘渊又将侄儿收留抚养，视若亲生，在叶弘渊的抚养教育下，侄子也考取了例贡。
+            </div>
+            <div class="monologues-next">点击屏幕继续 </div>
+    </div>
+
+    <div class="monologues-item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="monologues-word"> 叶弘渊热心村中公益事业，出资捐置学田，创办家塾，邀集村中儿童读书。
+            </div>
+            <div class="monologues-next">点击屏幕继续 </div>
+    </div>
+
+    <div class="monologues-item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="monologues-word">
+                    为了旌表叶弘渊的善行和培养叶以蕃成材的功德，明穆宗下旨赠封叶弘渊为“工部营缮同员外郎事主事”,并敕建牌坊
+            </div>
+            <div class="monologues-next">End </div>
+    </div>
+    
+    <script src="js/control.js"></script>
+</body>
+</html>

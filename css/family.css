@@ -1,0 +1,90 @@
+html{
+    height:100%;
+}
+body{
+    width:100%;
+    min-height:100%;
+    position: relative;
+    margin:0 auto;
+    background: url(../img/Family_bg.png) no-repeat;
+    background-size:cover;
+
+}
+.main{
+    width:100%;
+    height:500px;
+    position: absolute;
+    margin:0 ;
+}
+#main_box{
+    width:1100px;
+    height:500px;
+    padding:0;
+    position: relative;
+    margin:5% auto;
+}
+#user{
+    width:394px;
+    height:407px;
+    padding:0;
+    margin-top:16.5%;
+    float:left;
+}
+#ad{
+    width:43px;
+    height:43px;
+    margin-top:16.5%;
+    margin-left:20px;
+    cursor: pointer;
+    padding-top:128px;
+}
+#user {
+    list-style: none;
+    padding:0;
+}
+#user li input{
+    width: 394px;
+	height: 41px;
+	text-indent: 39px;
+	color: rgba(166, 166, 166, 1);
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 22px;
+	font-size: 16px;
+	line-height: 43px;
+	border: rgba(229, 229, 229, 1) solid 1px;
+    text-align: left;
+    margin-bottom: 21px;
+    padding:0;
+    outline: none;
+}
+#user li i{
+    position: absolute;
+    padding-left:15px;
+}
+
+#btn{
+    width: 450px;
+	height:  450px;
+    margin-top:110px;
+    background: url(../img/family_btn.png);
+    background-size:450px 450px;
+    border:none;
+    padding:0;
+    float:right; 
+    outline:none;
+}
+#btn a{
+    width: 450px;
+	height:  450px;
+	color: rgba(255, 255, 255, 1);
+	font-size: 50px;
+	line-height: 450px;
+	text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+#btn a:hover{
+    font-size: 60px;
+	line-height: 450px;
+	text-align: center;
+}

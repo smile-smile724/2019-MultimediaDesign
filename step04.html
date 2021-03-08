@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/step04.css">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <style>
+        *{ margin: 0;padding: 0;}
+        a{ text-decoration: none }
+    </style>
+    <title>搅拌取纸</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <a href="/travel/step03"><div>上一步</div></a>
+            <div onclick="start()"><span>1</span>开始搅拌</div>
+            <div onclick="end()"><span>2</span>结束搅拌</div>
+            <div onclick="putBox()"><span>3</span>放入木框</div>
+            <div onclick="getPaper()"><span>4</span>取纸</div>
+            <a href="/travel/step05"><div>下一步</div></a>
+        </div>
+        <div class="pool">
+            <img id="mixed" src="./images/step04/mixed.png" alt="">
+            <img id="mud" src="./images/step04/mud.png" alt="">
+            <div class="kick" id="kick"></div>
+        </div>
+        <div class="box"><img id="box" src="./images/step04/box.png" alt=""></div>
+        <div class="score">得分<span>10</span></div>
+    </div>
+
+    <script>
+        //开始搅拌
+        function start () {
+            var kick = document.getElementById("kick");
+            kick.style.animation = "mixing 3s";
+            kick.style['animation-iteration-count'] = "infinite";
+        }   
+
+        //结束搅拌
+        function end () {
+            var kick = document.getElementById("kick");
+            var mud = document.getElementById("mud");
+            kick.style.animation = "";
+            mud.style.display = "none"
+        }
+
+        //放入木框
+        function putBox () {
+            var box = document.getElementById("box");
+            var kick = document.getElementById("kick")
+            kick.style.display = "none";
+            box.style.animation = "boxing 3s";
+            box.style['animation-fill-mode'] = 'forwards';
+        }
+
+        //取纸
+        function getPaper () {
+            var box = document.getElementById("box");
+            box.style.animation = "getPaper 1s";
+            box.style['animation-fill-mode'] = 'forwards';
+        }
+    </script>
+</body>
+</html>

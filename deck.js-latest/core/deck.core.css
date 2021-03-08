@@ -1,0 +1,194 @@
+html{
+  height:100%;
+}
+body {
+  width:100%;
+  height: 100%;
+  position: relative;
+  margin:0 auto;
+  background: url(../main_bg.png) no-repeat;
+  background-size:cover;
+}
+
+.main{
+  width:1440px;
+  height: 700px; 
+  position: relative;
+  margin:5% auto 0 auto;
+
+}
+.deck{
+  width: 72%;
+  height: 100%; 
+}
+.video-btn{
+  position: absolute;
+  width: 168px;
+    height: 31px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 31px;
+  text-align: center;
+  right:26px;
+  top:12px;
+  z-index:99;
+  cursor: pointer;
+  border:none;
+  outline: none;
+  background-color: rgba(24, 144, 255, 1);
+  box-shadow: rgba(217, 217, 217, 1) solid 1px;
+  color:white;
+  display: none;
+}
+.video-btn:hover{
+    color: white;
+}
+.game-btn{
+  position: absolute;
+  width: 290px;
+    height: 40px;
+    background-color: rgba(24, 144, 255, 1);
+    box-shadow: rgba(217, 217, 217, 1) solid 1px;
+    color:white;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 40px;
+  text-align: center;
+  border:none;
+  z-index:99;
+  left:50%;
+  margin-left:-145px;
+  bottom:6px;
+  outline: none;
+  cursor: pointer;
+}
+.game-btn:hover{
+    color: white;
+}
+
+.deck-container {
+  position: relative;
+  width: 1100px;
+  height: 700px; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+  float: left;
+}
+.chat_box{
+  width: 310px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.chat_top{
+  height: 85%;
+  border: rgba(153, 153, 153, 0.15) 10px solid;
+border-radius: 23px;
+}
+.chat_get{
+  height:100%;
+  background-color: white;
+  border-radius: 13px;
+  margin:auto;
+  opacity: 0.7;
+}
+.chat_num{
+  color: rgba(42, 130, 228, 1);
+font-size: 14px;
+}
+.message-container{
+  width:94%;
+  height:87%;
+  list-style: none;
+  padding:0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left:2%;
+  float:left;
+}
+.message-container li{
+  margin-bottom: 0;
+  padding-bottom:0.5%;
+}
+.message-container::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+
+}
+.message-container::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  background: rgba(0,0,0,0.2);
+}
+.message-container::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+.chat_num_title{
+  margin:0 0 0 2%;
+}
+.clear_btn{
+  border:none;
+  outline: none;
+  float:right;
+  border-radius: 2px;
+  background-color:transparent;
+  color: rgba(42, 130, 228, 1);
+  margin:0 2% 0 0;
+}
+
+
+.js .deck-container {
+  visibility: hidden;
+  border-radius: 34px;
+}
+.ready .deck-container {
+  visibility: visible;
+}
+.touch .deck-container {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+}
+
+.deck-loading {
+  display: none;
+}
+
+.slide {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.slide img{
+  width:auto;
+  border-radius: 34px;
+  margin:0;
+  z-index:0;
+}
+
+.deck-before, .deck-previous, .deck-next, .deck-after {
+  position: absolute;
+  left: -999em;
+  top: -999em;
+}
+
+.deck-current {
+  z-index: 2;
+}
+
+.slide .slide {
+  visibility: hidden;
+  position: static;
+  min-height: 0;
+}
+
+.deck-child-current {
+  position: static;
+  z-index: 2;
+}
+.deck-child-current .slide {
+  visibility: hidden;
+}
+.deck-child-current .deck-previous, .deck-child-current .deck-before, .deck-child-current .deck-current {
+  visibility: visible;
+}

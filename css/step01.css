@@ -1,0 +1,190 @@
+.nav-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+    z-index: 10;
+}
+.nav-container div{
+    padding: 20px;
+    background-color: #03A9F4;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.nav-container div span{
+    padding: 3px 10px;
+    border-radius: 100%;
+    background: #F44336;
+    margin-right: 10px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/step01/bag.png") no-repeat;
+    background-size: 100%
+}
+
+#bamboo1{
+    position: absolute;
+    bottom: 0vh;
+    left: 0vh;
+    transform: rotate(0deg);
+    width: 20vw;
+    cursor: pointer;
+}
+
+#bamboo2{
+    display: inline-block;
+    position: absolute;
+    bottom: 0vh;
+    left: 15vw;
+    transform: rotate(0deg);
+    width: 20vw;
+    cursor: pointer;
+}
+.score {
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    color: #FFEB3B;
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.score>span{
+    color: red;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+
+/* 动画 */
+@keyframes AnimateFirst
+{
+    from { 
+        width: 20vw;
+        bottom: 0vh;
+        left: 0vh;
+        transform: rotate(0deg);
+    }
+    to {
+        width: 6vw;
+        bottom: 23vh;
+        left: 134vh;
+        transform: rotate(90deg);
+    }
+}
+@-moz-keyframes AnimateFirst
+{
+    from { 
+        width: 20vw;
+        bottom: 0vh;
+        left: 0vh;
+        transform: rotate(0deg);
+    }
+    to {
+        width: 6vw;
+        bottom: 23vh;
+        left: 134vh;
+        transform: rotate(90deg);
+    }
+}
+@-webkit-keyframes AnimateFirst
+{
+    from { 
+        width: 20vw;
+        bottom: 0vh;
+        left: 0vh;
+        transform: rotate(0deg);
+    }
+    to {
+        width: 6vw;
+        bottom: 23vh;
+        left: 134vh;
+        transform: rotate(90deg);
+    }
+}
+@-o-keyframes AnimateFirst
+{
+    from { 
+        width: 20vw;
+        bottom: 0vh;
+        left: 0vh;
+        transform: rotate(0deg);
+    }
+    to {
+        width: 6vw;
+        bottom: 23vh;
+        left: 134vh;
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes AnimateSecond
+{
+    from {
+        width: 20vw;
+        bottom: 0vh;
+        left: 15vw;
+        transform: rotate(0deg);
+       
+    }
+    to {
+        width: 5vw;
+        bottom: 25vh;
+        left: 78vw;
+        transform: rotate(90deg);
+    }
+}
+@-moz-keyframes AnimateSecond
+{
+    from {
+        width: 20vw;
+        bottom: 0vh;
+        left: 15vw;
+        transform: rotate(0deg);
+       
+    }
+    to {
+        width: 5vw;
+        bottom: 25vh;
+        left: 78vw;
+        transform: rotate(90deg);
+    }
+}
+@-webkit-keyframes AnimateSecond
+{
+    from {
+        width: 20vw;
+        bottom: 0vh;
+        left: 15vw;
+        transform: rotate(0deg);
+       
+    }
+    to {
+        width: 5vw;
+        bottom: 25vh;
+        left: 78vw;
+        transform: rotate(90deg);
+    }
+}
+@-o-keyframes AnimateSecond
+{
+    from {
+        width: 20vw;
+        bottom: 0vh;
+        left: 15vw;
+        transform: rotate(0deg);
+       
+    }
+    to {
+        width: 5vw;
+        bottom: 25vh;
+        left: 78vw;
+        transform: rotate(90deg);
+    }
+}

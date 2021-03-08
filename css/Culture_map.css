@@ -1,0 +1,68 @@
+body{
+    background: #4a9dfd;
+}
+
+.map{
+    width: 100%;
+    position: relative;
+}
+.map .map_bg img{
+    width: 100%;
+    display: block;
+}
+.map .map_location{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.map_pic{
+    position: absolute;
+    z-index: 8;
+    width: 6.7%;
+    border-radius: 63px;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.map_pic.DuS{
+    left: 32.375%;
+    top: 15%;
+}
+.map_icon{
+    position: absolute;
+    z-index: 7;
+    width: 2.5%;
+    z-index:99;
+}
+.map_icon.DuS{
+    top: 22.708%;
+    left: 38.6%;
+}
+.map_pic.wan_yc{
+    left: 68%;
+    top: 45%;
+}
+.map_icon.wan_yc{
+    left: 69%;
+    top: 55%;
+}
+
+.map_pic.NanGeG{
+    left: 24%;
+    top: 58%;
+}
+.map_icon.NanGeG{
+    left: 31%;
+    top: 60%;
+}
+#car{
+    position: absolute;
+    width:12%;
+    z-index: 10;
+    transition-duration: 2s;
+}
+
+

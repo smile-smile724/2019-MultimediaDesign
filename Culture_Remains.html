@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D导览</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Culture_Remains.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/config.js"></script>
+    <style>
+        .nav{
+            background-color:black;
+            opacity: 0.87;
+        }
+        .nav span{
+            color:white;
+            background: url("img/remain_back.png") no-repeat left center;
+        }
+        .horn{
+            position: fixed;
+            width:40px;
+            height:40px;
+            background: url("img/horn.svg") no-repeat;
+            background-size:cover;
+            top:15px;
+            left: 50%;
+            margin-left: 240px;
+            cursor: pointer;
+            z-index: 99;
+        }
+        .nav h2{
+            color:white;
+        }
+</style>
+</head>
+<body>
+<!-- 配音 -->
+<audio src="notice/remain.m4a" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+<div class="horn"></div>
+    <div class="nav">
+        <h2>快来转动镜头浏览村庄吧！</h2>
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+    </div>
+    <div class="main">
+            <iframe src="https://map.baidu.com/poi//@1338871909.5893438,316565502.2673233,21z,87t#panoid=9a552743566eb257fda778f1&panotype=inter&heading=334&pitch=0&l=21&tn=B_NORMAL_MAP&sc=0&newmap=1&shareurl=1&pid=1802500000131013114734888IN&iid=9a552743566eb257fda778f1&psp=%7B%22PanoIndoorPoiModule%22%3A%7B%22uid%22%3A%228fde79ccdc0e7fbc94ca07aa%22%7D%7D" width="1920" frameborder="0" height="1080px"></iframe>
+    </div>
+    <script src="js/control.js"></script>
+    <script>
+        $("#back").click(function(){
+            url = "/travel/culture_map?content=wan_yc";
+            window.location.href = url;
+        });
+        $(".horn").click(function(){
+                $("#dubbing").get(0).play();
+            });
+    </script>
+</body>
+</html>

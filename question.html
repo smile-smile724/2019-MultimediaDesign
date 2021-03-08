@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>祖辈速识</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="css/main.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/question.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+<script src="js/config.js"></script>
+<style>
+    .horn{
+        position: fixed;
+        width:40px;
+        height:40px;
+        background: url("img/horn.svg") no-repeat;
+        background-size:cover;
+        top:15.7%;
+        left:39%;
+        cursor: pointer;
+        z-index: 99;
+    }
+</style>
+</head>
+
+<body>
+     <!-- 配音 -->
+     <audio src="#" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+     <div class="horn"></div>
+    <div class="nav">
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+    </div>
+    <div class="main">
+        <div class="main_bg">
+            <img src="img/question_bg.png">
+        </div>
+        <div class="main_box">
+                <h1></h1>
+                <div class="main_top">
+                    <div id="word">
+                            
+                    </div>
+                    <div class="time">
+                        计时   <label id="time"></label>
+                    </div>
+                    <div class="judge">                                                                 
+                        <span style="color:rgba(14, 208, 25, 1);">正确   </span><label id="right">0</label>
+                        <span style="color: rgba(212, 48, 48, 1);margin-left:82px;">错误   </span><label id="wrong">0</label>
+                    </div>
+                </div>
+                <!-- 代码 开始 -->
+                <div class="demo">
+                    <div id="quiz-container"></div>
+                </div>
+                <!-- 代码 结束 -->
+                
+        </div>
+        
+    </div>
+    
+    <script src="js/control.js"></script>
+
+
+
+</body>
+</html>

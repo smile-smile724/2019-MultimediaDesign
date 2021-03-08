@@ -1,0 +1,108 @@
+.nav-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+}
+.nav-container div{
+    padding: 20px;
+    background-color: #03A9F4;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.nav-container div span{
+    padding: 3px 10px;
+    border-radius: 100%;
+    background: #F44336;
+    margin-right: 10px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/step03/bcg.png") no-repeat;
+    background-size: 100%;
+}
+.bucket{
+    display: inline-block;
+    position: absolute;
+    bottom: 3vh;
+    left: 3vw;
+}
+#bucket{
+    width: 30vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotate(0)
+}
+#hammer{
+    width: 12vw;
+    position: relative;
+    top: -22vh;
+    left: -12vw;
+    transform: rotate(10deg);
+    transform-origin: right bottom;
+    z-index: 3;
+}
+.pool{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 16vh;
+}
+.pool>img{
+    width: 42vw;
+}
+.score {
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    color: #FFEB3B;
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.score>span{
+    color: red;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+
+/* 捣竹动画 */
+@keyframes hammer {
+    0% { transform: rotate(10deg) }
+    50% { transform: rotate(-30deg) }
+    100% { transform: rotate(10deg) }
+}
+
+/* 竹泥入水 */
+@keyframes toWater {
+    from {
+        top: 0;
+        left: 0;
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(30deg);
+        top: -18vh;
+        left: 30vw;
+    }
+}
+@keyframes back {
+    from {
+        transform: rotate(30deg);
+        top: -18vh;
+        left: 30vw;
+    }
+    to {
+        top: 0;
+        left: 0;
+        transform: rotate(0)
+    }
+}

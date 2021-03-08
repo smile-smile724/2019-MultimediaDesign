@@ -1,0 +1,119 @@
+html{
+    height:100%;
+}
+body{
+    width:100%;
+    min-height:100%;
+    position: relative;
+    margin:0 auto;
+    background: url(../img/Index_bg.jpg) no-repeat;
+    background-size:cover;
+
+}
+.main{
+    width:100%;
+    margin:0 auto;
+    position: absolute;
+}
+#main_box,#homework{
+    position: absolute;
+    width:990px;
+    padding:0;
+    list-style: none;
+    left:50%;
+    margin-left:-495px;
+    top:190px;
+    padding-left:60px;
+}
+#homework{
+    top:590px;
+}
+#main_box li {
+    width: 210px;
+	height: 418px;
+    float:left;
+    margin:0 120px 0 0;
+}
+#main_box li button{
+    width: 200px;
+	height: 398px;
+	background-color: rgba(229, 229, 229, 0.27857142857142864);
+	border-radius: 18px;
+	box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.5);
+    border:none;
+    padding:0;
+    margin:10px 5px;
+    cursor: pointer;
+}
+#main_box li button a{
+    width: 200px;
+    height: 398px;
+    text-decoration: none;
+    display: inline-block;
+    padding:0;
+}
+#main_box li button a span{
+    font-size: 33px;
+    line-height: 350px;
+    color: rgba(56, 56, 56, 1);
+}
+#main_box li button a  p{
+    width:179px;
+    height: 144px;
+	color: rgba(80, 80, 80, 1);
+    font-size: 16px;
+    margin:-104px auto;
+}
+#main_box li button:hover{
+    width: 210px;
+	height: 418px;
+	border-radius: 19px;
+    margin:0;
+}
+#main_box li button:hover>a{
+    width: 210px;
+	height: 418px;
+}
+#main_box li button:hover>a>span{
+    font-size: 35px;
+}
+#main_box li button:hover>a>p{
+    font-size: 17px;
+}
+#homework li{
+    width: 210px;
+	height: 41px;
+    float:left;
+    margin:30px 120px 0 0;
+}
+#homework li button{
+    width: 200px;
+	height: 35px;
+	background-color: rgba(229, 229, 229, 0.27857142857142864);
+	border-radius: 18px;
+	box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.5);
+    border:none;
+    padding:0;
+    margin:3px 5px;
+    cursor: pointer;
+}
+#homework li button:hover{
+    width: 210px;
+	height: 41px;
+	border-radius: 19px;
+    margin:0;
+}
+
+#homework li button:hover>a{
+    width: 210px;
+	height: 41px;
+    font-size: 18px;
+    line-height: 18px;
+}
+#homework li button a{
+    text-align: center;
+    text-decoration: none;
+    padding:0;
+    color: rgba(56, 56, 56, 1);
+    font-size: 16px;
+}

@@ -1,0 +1,21 @@
+.control-btn,.uncontrol-btn{
+	border-radius: 6px;
+    width:45%;
+    height:35px;
+    margin:10% 0;
+    line-height: 35px;
+	text-align: center;
+    outline: none;
+    border:none;
+    padding:0;
+    color: white;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    display:none;
+    cursor: pointer;
+}
+.control-btn{
+    float: left;
+}
+.uncontrol-btn{
+    float:right;
+}

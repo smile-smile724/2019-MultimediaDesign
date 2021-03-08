@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组队</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/family.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/family.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <h2>欢迎大家参加本次乡村穿越之旅，大家要赶快组建好旅行小队，一起游览了解妙趣横生的乡土文化吧</h2>
+    </div>
+    <div class="main">
+        <div id="main_box">
+                <ul id="user">
+                    <li>
+                        <input id="family" type="text" placeholder="队伍名称" onfocus="javascript:if(this.placeholder=='队伍名称')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='队伍名称';" style=" border: rgb(223, 34, 34) solid 1px;">
+                        <i style="top:193px;"><img src="img/people.svg" alt="家族" width="17px" height="17px"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="people" placeholder="账户1" onfocus="javascript:if(this.placeholder=='账户1')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='账户1';" style=" border: rgb(223, 103, 34) solid 1px;">
+                        <i style="top:257px;"><img src="img/people.svg" alt="队友" width="17px" height="17px" class="i"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="people" placeholder="账户2" onfocus="javascript:if(this.placeholder=='账户2')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='账户2';" style=" border: rgb(236, 225, 72) solid 1px;">
+                        <i style="top:321px;"><img src="img/people.svg" alt="队友" width="17px" height="17px" class="i"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="people" placeholder="账户3" onfocus="javascript:if(this.placeholder=='账户3')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='账户3';" style=" border: rgb(50, 223, 34) solid 1px; display:none;">
+                        <i style="top:386px;"><img src="img/people.svg" alt="队友" width="17px" height="17px" style="display:none;" class="i"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="people" placeholder="账户4" onfocus="javascript:if(this.placeholder=='账户4')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='账户4';" style=" border: rgb(40, 115, 228) solid 1px; display:none;">
+                        <i style="top:450px;"><img src="img/people.svg" alt="队友" width="17px" height="17px" style="display:none;" class="i"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="people" placeholder="账户5" onfocus="javascript:if(this.placeholder=='账户5')this.placeholder='';" onblur="javascript:if(this.placeholder=='')this.placeholder='账户5';" style=" border: rgb(223, 34, 192) solid 1px; display:none;">
+                        <i style="top:514px;"><img src="img/people.svg" alt="队友" width="17px" height="17px" style="display:none;" class="i"></i>
+                    </li>
+                </ul>
+                <img src="img/add.svg" id="ad">
+            <button id="btn"><a href="#">出发</a></button>
+        </div>
+            
+    </div>
+</body>
+</html>

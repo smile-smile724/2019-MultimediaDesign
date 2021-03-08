@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>乡土传说</title>
+    <audio src="img/依依惜别.mp3" controls="controls" preload="auto" hidden="true" autoplay="true" loop="true" id="music"></audio>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Story-game.css">
+    <script src="js/Story-game.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<style>
+    #music-btn{
+        width:2%;
+        position: absolute;
+        top:12px;
+        right:20px;
+    }
+    .horn{
+        position: fixed;
+        width:40px;
+        height:40px;
+        background: url("img/horn.svg") no-repeat;
+        background-size:cover;
+        top:90%;
+        left:50%;
+        margin-left:-20px;
+        cursor: pointer;
+        z-index: 99;
+        display: none;
+    }
+</style>
+<body>
+    <!-- 配音 -->
+    <audio src="#" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+        <img src="img/onmusic.png" id="music-btn">
+    </div>
+    <div class="main">
+        <div class="item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="word">钱塘江的潮水从来就是很大的，潮头既高，潮水冲击的力量又猛， 因此钱塘江两岸的堤坝，总是这边才修好，那边又被冲坍了。“黄河日修一斗金，钱江日修一斗银。”那时候，潮水给人民带来的灾害，从这句话里就可以想见了。<br><br><br>
+                    到唐朝末年，有个吴越王叫做钱镠的，勇猛无比，当时一般人都称他为“钱王”。
+            </div>
+            <div class="next">点击屏幕继续 </div>
+        </div>
+
+        <div class="item" id="scene-1">
+            <img src="img/将领.png" class="general">
+            <div class="talk_box">
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">这潮水又涌进来了，今年的庄稼可怎么办呀。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="scene-2">
+            <img src="img/将领.png" class="general">
+            <img src="img/钱王.png" class="king">
+            <div class="talk_box">
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">报告大王，潮水又把堤坝冲垮了。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">这堤坝怎么总是修不好，到底是怎么回事？</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">因为钱塘江里面有个潮神在跟我们作对，只等到我们把海堤修得差不多的时候，他就兴风作浪，鼓起潮头，把我们的海堤给冲坍了。这海堤还是不修吧，总不会修好的。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王选项：</div>
+                    <div class="option-1">（1）既然潮神作怪，那没办法，就这样吧。</div>
+                    <div class="option-2">（2）这可恶的潮神，怎么不将它捉来，任凭它为祸百姓？</div>
+                    <div class="king-next_step">（点击要选择的选项） </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">这潮神如此可恶，不行，一定要把它捉来，以解我心头之恨！</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">这不能够，这不能够，他是个潮神，在海水里面，跟海龙王住在一起的哩！我们没法去找他。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">何况他来的时候，是随着潮水翻滚，都在潮头的海水里面；我们凡人，既看不到，更没法子捉拿他。人们就是趁着铁打的船去寻找，只要一碰到潮头，也会给吞没了的。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">呸！难道就让这个小小的潮神来胡作非为吗？看我带上万余弓手，会会这个潮神!</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">启禀大王，箭入海水岂不是做无用之功，不如点起一万枪兵，齐聚岸边吓阻潮神，说不定能有效果。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王选项：</div>
+                    <div class="option-1">（1）听从将领建议，带上一万枪兵</div>
+                    <div class="option-2">（2）不听从将领建议，带上一万弓手</div>
+                    <div class="king-next_step">（点击要选择的选项） </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">人墙若是有用，那堤坝也不会被冲塌了。站在岸边，枪刺不出，冲锋不能，徒增人数尔？</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">八月十八，且看这万余弓手岸边布阵，本王就要在这潮神最盛之时，将它射回海里，看看它还敢不敢造次。                </div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-color: black">
+            <!-- 独白 -->
+            <div class="word"> 你道钱王为什么一定选八月十八这一天呢？原来八月十八是潮神生日，这一天潮头最高，水势更是排山倒海凶猛无比；而且潮神会在这一天，骑着白马跑在潮头上面的。<br><br><br>
+                    八月十八日到了，钱塘江边搭起了一座大王台，从当地挑选出来的一万名精锐的弓箭手聚齐到江边，排列好阵势。
+            </div>
+            <div class="next">点击屏幕继续 </div>
+        </div>
+
+        <div class="item" id="scene-3">
+            <img src="img/将领.png" class="general">
+            <img src="img/钱王.png" class="king">
+            <img src="img/弓箭.png" class="arrow">
+            <img src="img/zhi.png" id="zhi">
+            <div class="talk_box">
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">为报潮神并水府，钱塘且借与钱城!           </div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="voice-over">钱王大声念出两句诗，边念边挥毫写于纸上</div>
+                    <div class="voice-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">喂，潮神听了！如果你答应了，就不许把潮水涌来！假如你潮水仍然要来，那就不要怪我手下无情了！</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="voice-over">说罢钱王将手中纸抛入江中，岸上的百姓以及弓箭手听到，都欢呼起来，那声音就像雷吼一样。大家神色紧张地对着江水，观看动静。</div>
+                    <div class="voice-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="general-name">将领：</div>
+                    <div class="general-contain">启禀大王！潮势愈演愈烈，已经有部分海堤被冲击了。</div>
+                    <div class="general-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王选项：</div>
+                    <div class="option-1">（1）勿须惊慌，我已将诗句抛入江中，且看潮水退去。</div>
+                    <div class="option-2">（2）不可迟疑，快令儿郎们打起精神，准备放箭！</div>
+                    <div class="king-next_step">（点击要选择的选项） </div>
+                </div>
+                <div class="talk">
+                    <div class="voice-over">只见潮水如一条白线猪突猛进，只向钱王飞驰而来。</div>
+                    <div class="voice-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">这潮神竟如此不识相，那便看看谁的手段高一筹吧！</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="voice-over">钱王一声令下，万支飞箭直射入潮，。一万支箭射了，又是一万支箭；一万支箭射了，又是一万支箭；“叟叟叟”，霎时射出了四万支箭，竟逼得那潮头不敢向岸边冲击过来。</div>
+                    <div class="voice-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王选项：</div>
+                    <div class="option-1">（1）潮水难以为继，可令儿郎们暂歇了</div>
+                    <div class="option-2">（2）儿郎们不可松懈，快快乘胜追击！</div>
+                    <div class="king-next_step">（点击要选择的选项） </div>
+                </div>
+                <div class="talk">
+                    <div class="king-name">钱王：</div>
+                    <div class="king-contain">这潮水竟有卷土重来之势，追射！追射！不可让其再成气候</div>
+                    <div class="king-next_step">点击继续 </div>
+                </div>
+                <div class="talk">
+                    <div class="voice-over">接到钱王的命令，弓手们急忙抖擞起精神，箭一支一支的飞射而出，那潮头只好弯弯曲曲地向西南逸去，最后消失得无影无踪了。</div>
+                    <div class="voice-next_step">点击继续 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-color: black">
+                <!-- 独白 -->
+                <div class="word"> 因此，直到今天，潮水一到六和塔边就快没有了；而在六和塔前面，江水弯弯曲曲地向前流去，像个“之”字，因此人家又叫这个地方为“之江”。<br><br><br>
+                    从这个时候起，海堤才得造成。百姓们为了纪念钱王这次射潮的功绩，就把江边的海堤，叫做“钱塘”。
+                </div>
+                <div class="next">End</div>
+            </div>
+    </div>
+    <script src="js/control.js"></script>
+</body>
+</html>

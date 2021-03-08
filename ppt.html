@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>传统技艺PPT</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/P-send.css">
+  <link rel="stylesheet" href="css/btn.css">
+  <link rel="stylesheet" href="css/Rank.css">
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="deck.js-latest/core/deck.core.css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.params.js"></script>
+  <script src="js/Rank.js"></script>
+  <script src="js/btn-control.js"></script>
+  <script src="js/ppt-control.js"></script>
+  <script src="js/config.js"></script>
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="deck.js-latest/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="deck.js-latest/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="deck.js-latest/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="deck.js-latest/extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="/deck.js-latest/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="deck.js-latest/themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="deck.js-latest/themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="deck.js-latest/core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="deck.js-latest/modernizr.custom.js"></script>
+</head>
+<body>
+    
+  <div class="nav">
+    <a href="#" id="back"><span class="go_back">Back</span></a>
+    <div><img src="img/Rank.svg" width="27px" height="27px"></div>
+  </div>
+  <div class="" style="height: 90px;"></div>
+  <div class="main">
+    <div class="deck">
+      <div class="deck-container">
+        <!-- A button to Video -->
+        <button class="video-btn">视频播放</button>
+
+        <!-- Begin slides. Just make elements with a class of slide. -->
+        <section class="slide">
+          <img src="#" id="slide-1">
+        </section>
+    
+        <section class="slide">
+          <img src="#" id="slide-2">
+        </section>
+    
+        <section class="slide">
+          <img src="#" id="slide-3">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-4">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-5">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-6">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-7">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-8">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-9">
+        </section>
+        <section class="slide">
+          <img src="#" id="slide-10">
+        </section>
+        <button class="game-btn">开始闯关</button>
+        <!-- End slides. -->
+    
+        <!-- Begin extension snippets. Add or remove as needed. -->
+    
+        <!-- deck.navigation snippet -->
+        <div aria-role="navigation">
+          <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+          <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+        </div>
+    
+        <!-- deck.status snippet -->
+        <p class="deck-status" aria-role="status">
+          <span class="deck-status-current"></span>
+          /
+          <span class="deck-status-total"></span>
+        </p>
+    
+        <!-- deck.goto snippet -->
+        <form action="." method="get" class="goto-form">
+          <label for="goto-slide">Go to slide:</label>
+          <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+          <datalist id="goto-datalist"></datalist>
+          <input type="submit" value="Go">
+        </form>
+        
+        <!-- End extension snippets. -->
+      </div>
+    </div>
+    
+    <div class="chat_box">
+        <div class="chat_top">
+            <div class="chat_get">
+                <div class="chat_num">
+                    <span class="chat_num_title">在线人数 :</span>
+                    <span class="chat_number">0</span>
+                </div>
+    
+                <ul class="message-container">
+
+                </ul>
+    
+                <button class="clear_btn"
+                        onclick="clearMsg()">清屏
+                </button>
+            </div>
+        </div>
+        <div class="chat_bot">
+            <div>  
+                <span id="username" th:text="${session.loginUser}"></span>
+                    <span>:</span>
+                </div>
+            <input class="send_input" id="msg"/>
+            <button class="send_btn"
+                    onclick="sendMsgToServer()">发送
+            </button>
+        </div>
+        
+        <button class="control-btn"
+              onclick="Control()">控制</button>
+        <button class="uncontrol-btn"
+              onclick="UnControl()">解控</button>
+        
+    </div>
+  </div>
+  
+<div class="Rank">
+  <ul class="Rank-main">
+      
+  </ul>
+</div>
+  
+  <script src="js/ppt-chat.js"></script>
+
+<!-- Required JS files. -->
+<script src="deck.js-latest/jquery.min.js"></script>
+<script src="deck.js-latest/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="deck.js-latest/extensions/menu/deck.menu.js"></script>
+<script src="deck.js-latest/extensions/goto/deck.goto.js"></script>
+<script src="deck.js-latest/extensions/status/deck.status.js"></script>
+<script src="deck.js-latest/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js-latest/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+
+</body>
+</html>
+</html>

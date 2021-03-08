@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传统文化（地图）</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Rank.css">
+    <link href="css/Culture_map.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script src="js/Rank.js"></script>
+    <script src="js/config.js"></script>
+    <style>
+            .horn{
+                position: fixed;
+                width:40px;
+                height:40px;
+                background: url("img/horn.svg") no-repeat;
+                background-size:cover;
+                top:15px;
+                left: 50%;
+                margin-left: 240px;
+                cursor: pointer;
+                z-index: 99;
+            }
+    </style>
+</head>
+<body>
+    <!-- 配音 -->
+    <audio src="notice/Culture.m4a" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <a href="/travel/index" id="back"><span class="go_back">Back</span></a>
+        <h2>请选择你们要去往的地点，听一听那里的村族文化</h2>
+        <div><img src="img/Rank.svg" width="27px" height="27px"></div>
+    </div>
+    <div class="map">
+        <div class="map_bg">
+            <img src="img/culture-map.png" />
+        </div>
+        <div class="map_location">
+            <img class="map_pic DuS" src="img/DuS.png" id="DuS">
+            <img class="map_icon DuS" src="img/place.png" >
+            <img class="map_pic wan_yc" src="img/WanYC.png" id="wan_yc">
+            <img class="map_icon wan_yc" src="img/place.png" >
+            <img class="map_pic NanGeG" src="img/NanGeG.png" id="NanGeG">
+            <img class="map_icon NanGeG" src="img/place.png" >
+            <img id="car" src="img/car.png" >
+        </div>
+    </div>
+    <div class="Rank">
+        <ul class="Rank-main">
+            
+        </ul>
+    </div>
+    
+    <script src="js/Culture-control.js"></script>
+    <script src="js/control.js"></script>
+    <script>
+            $(".horn").click(function(){
+                $("#dubbing").get(0).play();
+            });
+        </script>
+</body>
+</html>

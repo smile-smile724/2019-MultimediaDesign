@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/step02.css">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <title>徨桶蒸竹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a { text-decoration: none }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <a href="/travel/step01"><div>上一步</div></a>
+            <div onclick="addLime()"><span>1</span>加石灰</div>
+            <div onclick="handleLid()"><span>2</span>盖紧</div>
+            <div onclick="moveBucket()"><span>3</span>上蒸笼</div>
+            <div onclick="fire()"><span>4</span>生火</div>
+            <a href="/travel/step03"><div>下一步</div></a>
+        </div>
+        <div class="lime"><img src="./images/step02/lime.png" alt="" id="lime"></div>
+        <div class="bucket" id="bucket"><div class="lid" id="lid"><img style="width:28vw" src="./images/step02/lid.png" alt=""></div><div class="bucket-body"><img style="width:32.5vw" src="./images/step02/bucket.png" alt=""></div></div>
+        <div class="firewood"><img id="wood" src="./images/step02/firewood.png" alt=""><img id="fire" src="./images/step02/fire.png" alt=""></div>
+        <div id="steam"><img src="./images/step02/steam.png" alt=""></div>
+        <div class="score">得分<span>10</span></div>
+    </div>
+
+    <script>
+        //第一步 加石灰
+        function addLime () {
+            var lime = document.getElementById("lime");
+            lime.style.animation = "lime 2s"
+            lime.style['animation-fill-mode'] = 'forwards'
+        }
+
+        //第二步 盖上盖子
+        function handleLid () {
+            var lid = document.getElementById("lid");
+            lid.style.animation = "lid 1s";
+            lid.style['animation-fill-mode'] = 'forwards';
+        }
+
+        //第三步 搬木桶
+        function moveBucket () {
+            var bucket = document.getElementById("bucket");
+            var lime = document.getElementById("lime");
+            bucket.style.animation = "moveBucket 1s";
+            bucket.style['animation-fill-mode'] = 'forwards'
+            lime.style.display = "none";
+        }
+
+        //第四步 生火
+        function fire () {
+            var fire = document.getElementById("fire");
+            var steam = document.getElementById("steam");
+            fire.style.display = "inline-block";
+            steam.style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>

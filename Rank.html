@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据统计</title>
+    <link rel="stylesheet" href="./css/echart.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/macarons.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="js/config.js"></script>
+    <style>
+        .nav{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/travel/index"><span class="go_back">Back</span></a>
+    </div>
+    <div class="main-body">
+    <div id="main" style="width:100%;height:49vh;"></div>
+    <div id="left" style="width:49%;height:49vh;"></div>
+    <div id="right" style="width:49%;height:49vh;"></div>
+    </div>
+
+    <script>
+        var result;
+        // $.ajax({
+        //     url: '/travel/statrank',
+        //     type: 'get',
+        //     async: false,
+        //     success: function (res) {
+        //         console.log(res);
+        //         result = res;
+        //     },
+        //     error: function (err) {
+        //         console.log(err);
+        //     }
+        // })
+        //初始化
+        var familyName = ["队伍1","队伍2","队伍3","队伍4","队伍5"]
+        var score = [40, 30, 10, 10, 20];
+        var gameType = ['独山问答', '钱王射潮', '碗窑技艺', '竹纸技艺'];
+        var num = [20, 35, 17, 8];
+
+        // familyName = result.familyname;
+        // score = result.score;
+        // gameType = result.gametype;
+        // num = result.num;
+
+        
+
+        var myChartMain = echarts.init(document.getElementById('main'),'macarons');
+        var myChartLeft = echarts.init(document.getElementById('left'),'macarons');
+        var myChartRight = echarts.init(document.getElementById('right'),'macarons');
+
+        //配置数据（柱状图）
+        var option1 = {
+            title: {
+                text: '得分概况'
+            },
+            tooltip: {},
+            legend: {},
+            xAxis: {
+                data: familyName
+            },
+            yAxis: {},
+            series: [{
+                name: '得分',
+                type: 'bar',
+                data: score
+            }]
+        };
+        //配置数据（饼图）
+        var option2 = {
+                title : {
+                text: '成员得分概览',
+                x:'center',
+                y:'bottom'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                data: ['小明','小东','小海','小川','小江']
+            },
+            series : [
+                {
+                    name: '姓名',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['40%', '50%'],
+                    data: [
+                        { name: '小明', value: 0.2 },
+                        { name: '小东', value: 0.3 },
+                        { name: '小海', value: 0.2 },
+                        { name: '小川', value: 0.1 },
+                        { name: '小江', value: 0.2 }
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        }
+        //配置数据（折线图）
+        var option3 = {
+            title: {
+              text: "题目得分趋势",
+              x: 'center',
+              y: 'bottom'
+            },
+            xAxis: {
+                type: 'category',
+                data: gameType
+            },
+            yAxis: {
+                type: 'value',
+                name: '正确人数'
+            },
+            series: [{
+                data: num,
+                type: 'line'
+            }]
+        };
+
+        myChartMain.setOption(option1);
+        myChartLeft.setOption(option2);
+        myChartRight.setOption(option3);
+    </script>
+</body>
+</html>

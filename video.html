@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/video.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/send.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/Rank.css">
+    <script src="js/Rank.js"></script>
+    <script src="js/btn-control.js"></script>
+    <script src="js/video-control.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="#" id="back"><span class="go_back">Back</span></a>
+        <div><img src="img/Rank.svg" width="27px" height="27px"></div>
+    </div>
+    <div class="" style="height: 90px;"></div>
+    <div class="main">
+        <div class="video_box">
+            <video controls  autoplay="autoplay" preload="none" width="1200px" height="740px" data-setup="{}" id="video" >
+                
+            </video>
+        </div>
+        <div class="chat_box">
+            <div class="chat_top">
+                <div class="chat_get">
+                    <div class="chat_num">
+                        <span class="chat_num_title">在线人数 :</span>
+                        <span class="chat_number">0</span>
+                    </div>
+        
+                    <ul class="message-container">
+
+                    </ul>
+        
+                    <button class="clear_btn"
+                            onclick="clearMsg()">清屏
+                </button>
+                </div>
+            </div>
+            <div class="chat_bot">
+                <div>  
+                    <span id="username" th:text="${session.loginUser}"></span>
+                        <span>:</span>
+                </div>
+                <input class="send_input" id="msg"/>
+                <button class="send_btn"
+                        onclick="sendMsgToServer()">发送
+                </button>
+            </div>
+            
+            <button class="control-btn"
+                        onclick="Control()">控制</button>
+            <button class="uncontrol-btn"
+                        onclick="UnControl()">解控</button>
+        </div>
+    </div>
+    <div class="Rank">
+        <ul class="Rank-main">
+            
+        </ul>
+    </div>
+
+    <script src="js/video-chat.js"></script>
+</body>
+</html>
+</html>

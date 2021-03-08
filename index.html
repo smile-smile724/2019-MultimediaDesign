@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Rank.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/Rank.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/config.js"></script>
+    <style>
+            .horn{
+                position: fixed;
+                width:40px;
+                height:40px;
+                background: url("img/horn.svg") no-repeat;
+                background-size:cover;
+                top:15px;
+                left: 50%;
+                margin-left: 240px;
+                cursor: pointer;
+                z-index: 99;
+            }
+    </style>
+</head>
+<body>
+    <!-- 配音 -->
+    <audio src="notice/index.m4a" controls="controls" preload="auto" hidden="true" autoplay="autoplay"  id="dubbing"></audio>
+    <div class="horn"></div>
+    <div class="nav">
+        <h2>请选择你们要进入的模块</h2>
+        <div><img src="img/Rank.svg" width="27px" height="27px"></div>
+    </div>
+    <div class="Rank">
+        <ul class="Rank-main">
+           
+        </ul>
+    </div>
+    <div class="main">
+        <ul id="main_box">
+            <li><button><a href="/travel/skills_map"><span>传统技艺</span><p>黑色的泥土是怎样变成<br>
+                                                           白色陶瓷的呢<br>
+                                                           平平无奇的纸又是怎样<br>
+                                                           化蛹成蝶的呢<br>
+                                                           来一起探索饱含智慧的<br>
+                                                           传统技艺吧<br></p></a></button></li>
+            <li><button><a href="/travel/culture_map"><span>村族文化</span><p><br>
+                                                            爷爷的兄弟叫什么<br>
+                                                            你在族谱里什么位置呢<br>
+                                                            一起了解村族文化<br>
+                                                            听听方言讲的家族故事</p></a></button></li>
+            <li><button><a href="/travel/story_map"><span>乡土传说</span><p><br>
+                                                            夸父逐日、精卫填海<br>
+                                                            有英雄，有智慧<br>
+                                                            走进乡土传说之中<br>
+                                                            在传说中一起<br>
+                                                            披荆斩棘，惩强除恶</p></a></button></li>
+        </ul>
+         <ul id="homework">
+             <li><button id="Skill"><a href="#">课后练习</a></button></li>
+             <li><button id="Culture"><a href="#">课后练习</a></button></li>
+             <li><button id="Story"><a href="#">课后练习</a></button></li>
+         </ul>   
+    </div>
+    
+    <script src="js/control.js"></script>
+    <script>
+            $(".horn").click(function(){
+                $("#dubbing").get(0).play();
+            });
+        </script>
+</body>
+</html>

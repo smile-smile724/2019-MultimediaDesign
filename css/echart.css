@@ -1,0 +1,10 @@
+.main-body {
+    width: 70vw;
+    margin: 0 auto;
+}
+#left{
+    display: inline-block;
+}
+#right{
+    display: inline-block;
+}
